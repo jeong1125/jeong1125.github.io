@@ -1,17 +1,19 @@
- * {
-     box-sizing:border-box;
- }
- @font-face {
+* {
+    box-sizing:border-box;
+}
+
+@font-face {
     font-family: 'UhBeeJJIBBABBA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeJJIBBABBA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     }
 
- body, p {margin: 0px;}
-/* 메뉴 등 기타 */
-/*
- header {
+body, p {margin: 0px;}
+body {
+    height: 100%;
+}
+header {
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -22,13 +24,8 @@
     font-family: 'UhBeeJJIBBABBA';
     top: 24px;
     left: 24px;
-}
-
-#info {
-    position: absolute;
-    font-family: 'UhBeeJJIBBABBA';
-    top: 24px;
-    right: 24px;
+    color: #fff;
+    font-weight: bold;
 }
 
 nav {
@@ -37,6 +34,7 @@ nav {
     top: 24px;
     left: 50%;
     transform: translate(-50%, 0);
+    color: #fff;
 }
 
 footer {
@@ -50,40 +48,47 @@ footer {
     position: relative;
     top: 12px;
     text-align: center;
+    font-weight: bold;
 } 
-/* 밑에는 슬라이드 관련 */
- img {
-     display: block;
-     width: 100%;
- }
 
- .container {
-     position: relative;
-     margin: auto;
-     width: 100%;
-     max-width: 1080px;
-     padding: 30px 20px;
- }
+img {
+    display: block;
+    width: 100%;
+}
 
- .swiper-slide {
-     width: 100%;
-     background-color: #eee;
- }
+.container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 1080px;
+    padding: 30px 20px;
+}
 
- .text-wrap{
-     position: absolute;
-     top: 20%;
-     left: 5%;
-     right: 0;
-     width: 600px;
-     opacity: 0;
-     margin: auto;
-     text-align: center;
-     transition: 0.5s;
-     z-index: 100;
- }
+.swiper-slide {
+    width: 100%;
+    background-color: #eee;
+}
 
- .swiper-slide-active .text-wrap h2{
+.text-wrap{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 30%;
+    width: 600px;
+    opacity: 0;
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.swiper-slide-active .text-wrap{
+   opacity: 1;
+   top: 30%;
+   transition: 0.5s;
+}
+
+.swiper-slide-active .text-wrap h2{
     opacity: 1;
     top: 10%;
     transition: 0.5s;
@@ -104,85 +109,77 @@ footer {
     font-family:'UhBeeJJIBBABBA';
 }
 
- .text-wrap h2{
-     position: absolute;
-     transform: translate(-50%, -50%);
-     color:#fff;
-     font-size:5vw;
-     line-height: 1.25;
-     font-weight: bold;
-     margin-bottom: 16px;
- }
-
- .text-wrap h3{
-    position: absolute;
-    transform: translate(-50%, -50%);
+.text-wrap h2{
     color:#fff;
-    font-size: 2vw;
+    font-size: 12vh;
+    line-height: 1.25;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-family: "ff-providence-sans-web-pro",sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
- .text-wrap p{
-     position: absolute;
-     transform: translate(-50%, -50%);
-     color:#fff;
-     font-size: 2vw;
- }
+.text-wrap p{
+    color:#fff;
+    font-size: 5vh;
+}
 
- .swiper-pagination-bullet {
-     width: 40px;
-     height: 3px;
-     border-radius: 0;
-     background-color: #fff;
- }
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 3px;
+    border-radius: 0;
+    background-color: #fff;
+}
 
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled{
-    opacity: 0;
+   opacity: 0;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    width: 30px;
-    height: 30px;
-    background-color: rgba(240, 240, 240, 0);
-    backdrop-filter: blur(2px);
-    background-size: 18px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 2;
-    border-radius: 50%;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    position: absolute;
+   width: 30px;
+   height: 30px;
+   background-color: rgba(240, 240, 240, 0);
+   backdrop-filter: blur(2px);
+   background-size: 18px;
+   background-position: center;
+   background-repeat: no-repeat;
+   z-index: 2;
+   border-radius: 50%;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   position: absolute;
 }
 
 .swiper-button-prev::after,
 .swiper-rtl .swiper-button-next:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev::after {
-    display: none;
+   display: none;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: #393939;
-    box-shadow: 0 4px 12px rgba(33, 33, 33, 0.351);
+   background-color: #393939;
+   box-shadow: 0 4px 12px rgba(33, 33, 33, 0.351);
 }
 
 .swiper-button-prev {
-    background-image: url(../left.png);
-    left: 20px;
+   background-image: url(../left.png);
+   left: 20px;
 }
 
 .swiper-button-prev:hover{
-    background-image: url(../left.png);
+   background-image: url(../left.png);
 }
 
 .swiper-button-next {
-    background-image: url(../right.png);
-    right: 20px;
+   background-image: url(../right.png);
+   right: 20px;
 }
 
 .swiper-button-next:hover{
-    background-image: url(../right.png);
+   background-image: url(../right.png);
 }
