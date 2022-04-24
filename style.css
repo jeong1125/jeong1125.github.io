@@ -10,7 +10,9 @@
 
  body, p {margin: 0px;}
  body {
-     height: 150%;
+     min-height: 100vh;
+     margin: 0;
+     padding: 0;
  }
  
  img {
@@ -46,21 +48,21 @@
 
  .swiper-slide-active .text-wrap h2{
     opacity: 1;
-    top: 1vw;
+    top: auto;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
 
 .swiper-slide-active .text-wrap p{
     opacity: 1;
-    top: 3vw;
+    top:auto;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
 
 .swiper-slide-active .text-wrap h3{
     opacity: 1;
-    top: 5vw;
+    top: auto;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
