@@ -9,7 +9,8 @@
     }
 
  body, p {margin: 0px;}
- 
+/* 메뉴 등 기타 */
+/*
  header {
     position: fixed;
     width: 100%;
@@ -49,8 +50,8 @@ footer {
     position: relative;
     top: 12px;
     text-align: center;
-}
-
+} 
+/* 밑에는 슬라이드 관련 */
  img {
      display: block;
      width: 100%;
