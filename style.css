@@ -9,13 +9,14 @@
     }
 
  body, p {margin: 0px;}
- body {
-     min-height: 100vh;
-     margin: 0;
-     padding: 0;
- }
  
- #logo {
+ header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo {
     position: absolute;
     top: 24px;
     left: 24px;
