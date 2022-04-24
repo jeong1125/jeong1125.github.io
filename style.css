@@ -46,21 +46,21 @@
 
  .swiper-slide-active .text-wrap h2{
     opacity: 1;
-    top: 10%;
+    top: 1vw;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
 
 .swiper-slide-active .text-wrap p{
     opacity: 1;
-    top: 30%;
+    top: 3vw;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
 
 .swiper-slide-active .text-wrap h3{
     opacity: 1;
-    top: 50%;
+    top: 5vw;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
