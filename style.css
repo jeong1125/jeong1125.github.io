@@ -1,0 +1,128 @@
+ * {
+     box-sizing:border-box;
+ }
+ @font-face {
+    font-family: 'UhBeeJJIBBABBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeJJIBBABBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+ body, p {margin: 0px;}
+ body {
+     height: 1200px;
+ }
+ 
+ img {
+     display: block;
+     width: 100%;
+ }
+
+ .container {
+     position: relative;
+     margin: auto;
+     width: 100%;
+     max-width: 1080px;
+     padding: 30px 20px;
+ }
+
+ .swiper-slide {
+     width: 100%;
+     background-color: #eee;
+ }
+
+ .text-wrap{
+     position: absolute;
+     top: 20%;
+     left: 5%;
+     right: 0;
+     width: 600px;
+     opacity: 0;
+     margin: auto;
+     text-align: center;
+     transition: 0.5s;
+     z-index: 1;
+ }
+
+ .swiper-slide-active .text-wrap{
+    opacity: 1;
+    top: 10%;
+    transition: 0.5s;
+    font-family:'UhBeeJJIBBABBA';
+}
+
+ .text-wrap h2{
+     position: absolute; 
+     transform: translate(-50%, -50%);
+     color:#fff;
+     font-size:5vw;
+     line-height: 1.25;
+     font-weight: bold;
+     margin-bottom: 16px;
+ }
+
+ .text-wrap p{
+     position: absolute;
+     transform: translate(-50%, -50%);
+     color:#fff;
+     font-size: 2vw;
+ }
+
+ .swiper-pagination-bullet {
+     width: 40px;
+     height: 3px;
+     border-radius: 0;
+     background-color: #fff;
+ }
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled{
+    opacity: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(240, 240, 240, 0);
+    backdrop-filter: blur(2px);
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    border-radius: 50%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #393939;
+    box-shadow: 0 4px 12px rgba(33, 33, 33, 0.351);
+}
+
+.swiper-button-prev {
+    background-image: url(../left.png);
+    left: 20px;
+}
+
+.swiper-button-prev:hover{
+    background-image: url(../left.png);
+}
+
+.swiper-button-next {
+    background-image: url(../right.png);
+    right: 20px;
+}
+
+.swiper-button-next:hover{
+    background-image: url(../right.png);
+}
