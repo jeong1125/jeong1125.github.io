@@ -37,6 +37,11 @@ nav {
     color: #fff;
 }
 
+.menuitem {
+    float: left;
+    padding: 0 8px;
+}
+
 footer {
     position: relative;
     font-family: 'UhBeeJJIBBABBA';
