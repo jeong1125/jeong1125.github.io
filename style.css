@@ -44,15 +44,29 @@
      z-index: 1;
  }
 
- .swiper-slide-active .text-wrap{
+ .swiper-slide-active .text-wrap h2{
     opacity: 1;
     top: 10%;
     transition: 0.5s;
     font-family:'UhBeeJJIBBABBA';
 }
 
+.swiper-slide-active .text-wrap p{
+    opacity: 1;
+    top: 30%;
+    transition: 0.5s;
+    font-family:'UhBeeJJIBBABBA';
+}
+
+.swiper-slide-active .text-wrap h3{
+    opacity: 1;
+    top: 50%;
+    transition: 0.5s;
+    font-family:'UhBeeJJIBBABBA';
+}
+
  .text-wrap h2{
-     position: absolute; 
+     position: absolute;
      transform: translate(-50%, -50%);
      color:#fff;
      font-size:5vw;
