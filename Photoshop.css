@@ -68,12 +68,14 @@ main {
 
 footer {
     position: relative;
+    font-family: 'UhBeeJJIBBABBA';
     width: 100%;
     height: 48px;
-    top: 100px;
+    background-color: azure;
 }
 #copyright {
     position: relative;
     top: 12px;
     text-align: center;
-}
+    font-weight: bold;
+} 
