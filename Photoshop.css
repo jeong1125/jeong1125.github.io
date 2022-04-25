@@ -64,12 +64,13 @@ main {
 .title {
     font-weight: bolder;
     line-height: 300%;
-    font-size: 3vh;
+    font-size: 5vh;
     color: #fff;
 }
 
 p{
     font-family: 'UhBeeJJIBBABBA';
+    color: #fff;
 }
 
 footer {
