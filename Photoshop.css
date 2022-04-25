@@ -7,26 +7,35 @@
 
 body, p { margin: 0; }
 
+body {
+    height: 100%;
+}
 header {
     position: fixed;
     width: 100%;
-    z-index: 1000; /* 특정 요소(레이어)를 다른 요소의 위에 배치할 때 z-index 값이 크면 됨 */
+    z-index: 1000;
 }
+
 #logo {
     position: absolute;
-    top: 12px;
+    font-family: 'UhBeeJJIBBABBA';
+    top: 24px;
     left: 24px;
-    font-family: 'Amarante', cursive;
-    font-size: 4.0em;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 80px;
 }
+
 nav {
     position: absolute;
+    font-family: 'UhBeeJJIBBABBA';
     top: 24px;
-    right: 24px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
 }
+
 .menuitem {
-    float: left; /* float 속성을 사용하면 block 요소를 가로로 배치할 수 있음 */
+    float: left;
     padding: 0 8px;
 }
 
@@ -40,7 +49,7 @@ main {
     position: relative;
     width: 60%;
     height: 600px;
-    margin: 0 auto; /* position이 relative인 경우 가로 가운데 정렬 방법 */
+    margin: 0 auto;
     margin-bottom: 48px;
 }
 .artwork img {
