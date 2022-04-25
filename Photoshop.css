@@ -68,6 +68,7 @@ main {
 .title {
     font-weight: bold;
     line-height: 300%;
+    font-size: 2vh;
 }
 
 footer {
