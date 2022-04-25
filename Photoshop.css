@@ -62,7 +62,7 @@ main {
     margin-left: 24px;
 }
 .title {
-    font-weight: bold;
+    font-weight: bolder;
     line-height: 300%;
     font-size: 3vh;
     color: #fff;
