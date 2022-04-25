@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'UhBeeJJIBBABBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeJJIBBABBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body, p { margin: 0; }
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* 특정 요소(레이어)를 다른 요소의 위에 배치할 때 z-index 값이 크면 됨 */
+}
+#logo {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    font-family: 'Amarante', cursive;
+    font-size: 4.0em;
+    font-weight: 700;
+}
+nav {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+.menuitem {
+    float: left; /* float 속성을 사용하면 block 요소를 가로로 배치할 수 있음 */
+    padding: 0 8px;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    top: 150px;
+    padding-bottom: 64px;
+}
+.artwork {
+    position: relative;
+    width: 60%;
+    height: 600px;
+    margin: 0 auto; /* position이 relative인 경우 가로 가운데 정렬 방법 */
+    margin-bottom: 48px;
+}
+.artwork img {
+    height: 100%;
+}
+.description {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-left: 24px;
+}
+.title {
+    font-weight: bold;
+    line-height: 300%;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    top: 100px;
+}
+#copyright {
+    position: relative;
+    top: 12px;
+    text-align: center;
+}
