@@ -16,10 +16,6 @@ header {
     z-index: 1000;
 }
 
-p {
-    font-family: 'UhBeeJJIBBABBA';
-}
-
 #logo {
     position: absolute;
     font-family: 'UhBeeJJIBBABBA';
@@ -70,6 +66,10 @@ main {
     line-height: 300%;
     font-size: 3vh;
     color: #fff;
+}
+
+.p{
+    font-family: 'UhBeeJJIBBABBA';
 }
 
 footer {
