@@ -16,6 +16,10 @@ header {
     z-index: 1000;
 }
 
+p {
+    font-family: 'UhBeeJJIBBABBA';
+}
+
 #logo {
     position: absolute;
     font-family: 'UhBeeJJIBBABBA';
