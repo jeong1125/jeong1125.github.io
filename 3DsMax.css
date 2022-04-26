@@ -11,3 +11,82 @@ body {
     height: 100%;
     background-color: #6eceda;
 }
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo {
+    position: absolute;
+    font-family: 'UhBeeJJIBBABBA';
+    top: 24px;
+    left: 24px;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+nav {
+    position: absolute;
+    font-family: 'UhBeeJJIBBABBA';
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+}
+
+.menuitem {
+    float: left;
+    padding: 0 8px;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    top: 150px;
+    padding-bottom: 64px;
+}
+.artwork {
+    position: relative;
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+.artwork img {
+    height: 100%;
+}
+.description {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-left: 24px;
+}
+.title {
+    font-weight: bolder;
+    line-height: 300%;
+    font-size: 5vh;
+    color: rgb(0, 0, 0);
+}
+
+p{
+    font-family: 'UhBeeJJIBBABBA';
+    color: rgb(0, 0, 0);
+    font-size: 3vh;
+}
+
+footer {
+    position: relative;
+    font-family: 'UhBeeJJIBBABBA';
+    width: 100%;
+    height: 48px;
+    top: 100px;
+    background-color: #ece6cc;
+    color: #000
+}
+#copyright {
+    position: relative;
+    top: 12px;
+    text-align: center;
+    font-weight: bold;
+} 
