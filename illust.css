@@ -71,6 +71,7 @@ main {
 }
 
 p {
+    font-size: large;
     color:#fff;
     font-family: 'UhBeeJJIBBABBA';
 }
@@ -78,6 +79,33 @@ p {
 h4 {
     color:#fff;
     font-family: 'UhBeeJJIBBABBA';
+}
+
+.lb-wrap {
+    width: 70%;
+    margin: 10px auto;
+    border: 1px solid #000000;
+    position: relative;
+}
+  .lb-wrap img {
+    width: 100%;
+    vertical-align: middle;
+}
+.lb-text {
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    font-family: 'UhBeeJJIBBABBA'
+}
+
+@media(max-width:440px) {
+    .lb-wrap {
+    width: 95%;
+    }
 }
 
 footer {

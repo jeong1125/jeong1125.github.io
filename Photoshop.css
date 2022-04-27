@@ -70,6 +70,7 @@ main {
 }
 
 p {
+    font-size: large;
     color:#fff;
     font-family: 'UhBeeJJIBBABBA';
 }
@@ -84,11 +85,14 @@ h4 {
     margin: 10px auto;
     border: 1px solid #000000;
     position: relative;
+
 }
-  .lb-wrap img {
+
+.lb-wrap img {
     width: 100%;
     vertical-align: middle;
 }
+
 .lb-text {
     border-radius: 10px;
     text-align: center;
