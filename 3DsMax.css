@@ -74,12 +74,12 @@ main {
 .title {
     font-weight: bolder;
     line-height: 300%;
-    font-size: 5vh;
+    font-size: 8vh;
     color: #fff;
 }
 
 p {
-    font-size: large;
+    font-size: larger;
     color:#fff;
     font-family: 'UhBeeJJIBBABBA';
 }
