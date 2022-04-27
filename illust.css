@@ -9,7 +9,7 @@ body, p { margin: 0; }
 
 body {
     height: 100%;
-    background-color: #e5c1c5;
+    background-color: #e99a37;
 }
 header {
     position: fixed;
@@ -75,14 +75,18 @@ p {
     font-family: 'UhBeeJJIBBABBA';
 }
 
+h4 {
+    color:#fff;
+    font-family: 'UhBeeJJIBBABBA';
+}
+
 footer {
     position: relative;
     font-family: 'UhBeeJJIBBABBA';
     width: 100%;
     height: 48px;
     top: 100px;
-    background-color: #8b7578;
-    color: #000
+    background-color: #2d0402;
 }
 #copyright {
     position: relative;
