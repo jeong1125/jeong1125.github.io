@@ -28,6 +28,14 @@ header {
     font-size: 80px;
 }
 
+#info {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'UhBeeJJIBBABBA';
+    color: #fff;
+}
+
 nav {
     position: absolute;
     font-family: 'UhBeeJJIBBABBA';
