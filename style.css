@@ -107,13 +107,6 @@ img {
     font-family:'UhBeeJJIBBABBA';
 }
 
-.swiper-slide-active .text-wrap h3{
-    opacity: 1;
-    top: 50%;
-    transition: 0.5s;
-    font-family:'UhBeeJJIBBABBA';
-}
-
 .text-wrap h2{
     color:#fff;
     font-size: 12vh;
@@ -128,6 +121,7 @@ img {
 .text-wrap p{
     color:#fff;
     font-size: 5vh;
+    font-family: 'UhBeeJJIBBABBA';
 }
 
 .swiper-pagination-bullet {
