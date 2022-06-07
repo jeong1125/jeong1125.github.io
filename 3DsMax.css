@@ -9,7 +9,7 @@ body, p { margin: 0; }
 
 body {
     height: 100%;
-    background-color: #f7f7f7;
+    background-color: #F7F7F7;
 }
 header {
     position: fixed;
@@ -19,11 +19,16 @@ header {
 
 #logo {
     position: absolute;
+    width: 360px;
+    margin: 0 auto;
+    top: -30px;
+    left: 20px;
+    padding-top: 32px;
     font-family: 'UhBeeJJIBBABBA';
-    top: 24px;
-    left: 24px;
+    text-align: left;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 4.0em;
+    font-weight: 700;
 }
 
 #info {
@@ -46,6 +51,25 @@ nav {
 .menuitem {
     float: left;
     padding: 0 8px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.menuitem > ul {
+    display: inline-block;
+    margin: 0; padding: 0;
+    list-style-type: none;
+}
+.menuitem > ul a:link,
+.menuitem > ul a:visited
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.menuitem > ul li {
+    float: left;
+    padding: 0 24px;
 }
 
 main {
@@ -70,7 +94,6 @@ main {
     top: 0;
     margin-left: 24px;
 }
-
 .title {
     font-weight: bolder;
     line-height: 300%;
@@ -78,15 +101,96 @@ main {
     color: #fff;
 }
 
-p {
-    font-size: larger;
-    color:#fff;
-    font-family: 'UhBeeJJIBBABBA';
+#item-grid {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+}
+.item-container {
+    position: relative;
+    width: 65%; 
+    padding-top: 36.5625%;
+} 
+.item {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    top: 8px;
+    left: 8px;
+    overflow: hidden;
 }
 
-h4 {
-    color:rgb(0, 0, 0);
-    font-family: 'UhBeeJJIBBABBA';
+.item > img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #0000007f;    
+}
+.item:hover .overlay {
+    opacity: 1;
+}  
+.text {
+    color: white;
+    font-size: 30px;
+    font-family:'UhBeeJJIBBABBA';
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bolder;
+}
+.sull {
+    color: white;
+    font-size: 15px;
+    font-family:'UhBeeJJIBBABBA';
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#copyright {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    font-size: 1.0em;
+    bottom: 16px;
+}
+
+@media screen and (max-width: 960px) { /* 가로가 960보다 작을 경우*/
+    .item-container {
+        width: 75%;
+        padding-top: 42.1875%;
+    } 
+    #social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {/* 가로가 520보다 작을 경우*/
+    .item-container {
+        width: 100%;
+        padding-top: 56.25%;
+    } 
 }
 
 .lb-wrap {
@@ -94,11 +198,14 @@ h4 {
     margin: 10px auto;
     border: 1px solid #000000;
     position: relative;
+
 }
-  .lb-wrap img {
+
+.lb-wrap img {
     width: 100%;
     vertical-align: middle;
 }
+
 .lb-text {
     border-radius: 10px;
     text-align: center;
@@ -122,7 +229,7 @@ footer {
     width: 100%;
     height: 48px;
     top: 100px;
-    background-color: #69a6a9;
+    background-color: #77A4A8;
 }
 #copyright {
     position: relative;

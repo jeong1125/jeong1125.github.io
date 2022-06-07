@@ -11,6 +11,7 @@
 
 body, p {margin: 0px;}
 body {
+    margin: 0; padding: 0;
     height: 100%;
 }
 header {
@@ -21,11 +22,16 @@ header {
 
 #logo {
     position: absolute;
+    width: 360px;
+    margin: 0 auto;
+    top: -30px;
+    left: 20px;
+    padding-top: 32px;
     font-family: 'UhBeeJJIBBABBA';
-    top: 24px;
-    left: 24px;
+    text-align: left;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 4.0em;
+    font-weight: 700;
 }
 
 #info {
@@ -48,8 +54,26 @@ nav {
 .menuitem {
     float: left;
     padding: 0 8px;
+    text-align: center;
+    font-size: 1.5em;
 }
 
+.menuitem > ul {
+    display: inline-block;
+    margin: 0; padding: 0;
+    list-style-type: none;
+}
+.menuitem > ul a:link,
+.menuitem > ul a:visited
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.menuitem > ul li {
+    float: left;
+    padding: 0 24px;
+}
 footer {
     position: relative;
     font-family: 'UhBeeJJIBBABBA';
@@ -117,7 +141,7 @@ img {
 
 .text-wrap h2{
     color:#fff;
-    font-size: 12vh;
+    font-size: 85px;
     line-height: 1.25;
     font-weight: bold;
     margin-bottom: 16px;
@@ -128,7 +152,7 @@ img {
 
 .text-wrap p{
     color:#fff;
-    font-size: 5vh;
+    font-size: 50px;
     font-family: 'UhBeeJJIBBABBA';
 }
 
@@ -190,3 +214,4 @@ img {
 .swiper-button-next:hover{
    background-image: url(../right.png);
 }
+
