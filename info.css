@@ -184,6 +184,12 @@ main {
     #social {
         display: none;
     }
+    nav {
+        font-size: small;
+    }
+    #logo {
+        font-size: 3.0em;
+    }
 }
 
 @media screen and (max-width: 520px) {/* 가로가 520보다 작을 경우*/
@@ -191,6 +197,10 @@ main {
         width: 100%;
         padding-top: 100%;
     } 
+    nav { 
+        position: absolute;
+        font-size: xx-small;
+    }
 }
 
 .lb-wrap {
