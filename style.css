@@ -227,6 +227,13 @@ img {
     #logo {
         font-size: 3.0em;
     }
+    .swiper-slide {
+        height: 100%;
+        width : 75%;
+    }
+    .img {
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 520px) {/* 가로가 520보다 작을 경우*/
