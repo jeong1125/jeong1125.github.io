@@ -1,6 +1,4 @@
-* {
-    box-sizing:border-box;
-}
+/*{border: solid 1px red;}*/
 
 @font-face {
     font-family: 'UhBeeJJIBBABBA';
@@ -30,7 +28,7 @@ header {
     font-family: 'UhBeeJJIBBABBA';
     text-align: left;
     font-weight: bold;
-    font-size: 4.0em;
+    font-size: 5.0em;
     font-weight: 700;
 }
 
