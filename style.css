@@ -213,3 +213,29 @@ img {
    background-image: url(../right.png);
 }
 
+@media screen and (max-width: 960px) { /* 가로가 960보다 작을 경우*/
+    .item-container {
+        width: 75%;
+        padding-top: 42.1875%;
+    } 
+    #social {
+        display: none;
+    }
+    nav {
+        font-size: 0.7em;
+    }
+    #logo {
+        font-size: 3.0em;
+    }
+}
+
+@media screen and (max-width: 520px) {/* 가로가 520보다 작을 경우*/
+    .item-container {
+        width: 100%;
+        padding-top: 56.25%;
+    } 
+    nav { 
+        position: absolute;
+        font-size: xx-small;
+    }
+}
