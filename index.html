@@ -33,7 +33,7 @@
 
     // 3. 3D 모델 로드
     const loader = new THREE.GLTFLoader();
-    loader.load('path_to_model.gltf', function(gltf) {
+    loader.load('3dmodel/nintendo.gltf', function(gltf) {
         const model = gltf.scene;
         scene.add(model);
     }, undefined, function(error) {
