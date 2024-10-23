@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,27 +26,31 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
-    // 2. 조명 설정 (옵션)
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(1, 1, 1).normalize();
-    scene.add(light);
+    // 2. 조명 설정
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 10, 7.5);
+    scene.add(directionalLight);
 
     // 3. 3D 모델 로드
     const loader = new THREE.GLTFLoader();
     loader.load('3dmodel/nintendo.gltf', function(gltf) {
         const model = gltf.scene;
+        model.scale.set(0.5, 0.5, 0.5);  // 모델 크기 조정
         scene.add(model);
     }, undefined, function(error) {
         console.error('An error happened', error);
     });
 
-    // 4. OrbitControls를 사용한 카메라 제어 (회전, 줌, 팬 가능)
+    // 4. OrbitControls 설정
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;   // 부드러운 회전
-    controls.dampingFactor = 0.25;   // 감쇠 효과
-    controls.enableZoom = true;      // 줌 가능
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.25;
+    controls.enableZoom = true;
 
-    camera.position.z = 5;
+    camera.position.z = 10;  // 카메라 위치 조정
 
     // 5. 화면 크기 조정 시 대응
     window.addEventListener('resize', () => {
@@ -60,7 +64,7 @@
     // 6. 애니메이션 루프
     function animate() {
         requestAnimationFrame(animate);
-        controls.update();  // OrbitControls 업데이트
+        controls.update();
         renderer.render(scene, camera);
     }
 
