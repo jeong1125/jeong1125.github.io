@@ -40,7 +40,7 @@
         scene.add(light);
 
         let loader = new GLTFLoader();
-        loader.load('3dmodel/scene.gltf', function(gltf){
+        loader.load('3dmodel\scene.gltf', function(gltf){
             console.log('Model loaded:', gltf.scene);  // 모델 로드 확인
             scene.add(gltf.scene);
             animate();  // 애니메이션 시작
