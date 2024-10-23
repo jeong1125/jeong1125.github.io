@@ -1,3 +1,71 @@
-오늘 <strong>고급디지털표현</strong> 시간에 만든 간단한 과제입니다.
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
 
-웹디 수업에서 만든 페이지는 과거로 보내버리고 새롭게 시작하겠습니다.
+<canvas id="3d-canvas"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+
+<script>
+    // 1. 씬, 카메라, 렌더러 설정
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('3d-canvas') });
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // 2. 조명 설정 (옵션)
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(1, 1, 1).normalize();
+    scene.add(light);
+
+    // 3. 3D 모델 로드
+    const loader = new THREE.GLTFLoader();
+    loader.load('path_to_model.gltf', function(gltf) {
+        const model = gltf.scene;
+        scene.add(model);
+    }, undefined, function(error) {
+        console.error('An error happened', error);
+    });
+
+    // 4. OrbitControls를 사용한 카메라 제어 (회전, 줌, 팬 가능)
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;   // 부드러운 회전
+    controls.dampingFactor = 0.25;   // 감쇠 효과
+    controls.enableZoom = true;      // 줌 가능
+
+    camera.position.z = 5;
+
+    // 5. 화면 크기 조정 시 대응
+    window.addEventListener('resize', () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    });
+
+    // 6. 애니메이션 루프
+    function animate() {
+        requestAnimationFrame(animate);
+        controls.update();  // OrbitControls 업데이트
+        renderer.render(scene, camera);
+    }
+
+    animate();
+</script>
+
+</body>
+</html>
