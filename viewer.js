@@ -33,7 +33,7 @@ const loader = new GLTFLoader();
 let model;
 
 loader.load(
-    'C:\Users\정병찬\Documents\GitHub\jeong1125.github.io\model.gltf',  // 모델 경로를 실제 파일 경로로 교체
+    'model.gltf',  // 모델 경로를 실제 파일 경로로 교체
     function (gltf) {
         model = gltf.scene;
         scene.add(model);
