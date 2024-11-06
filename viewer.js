@@ -1,6 +1,9 @@
-import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
+/**import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js'; */
+
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // Three.js 기본 설정
 const canvas = document.getElementById('canvas');
