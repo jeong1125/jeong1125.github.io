@@ -33,10 +33,11 @@ const loader = new GLTFLoader();
 let model;
 
 loader.load(
-    'model.gltf',  // 모델 경로를 실제 파일 경로로 교체
+    './model.gltf',  // 모델 경로를 정확하게 지정
     function (gltf) {
         model = gltf.scene;
         scene.add(model);
+        console.log("Model loaded successfully:", gltf); // 모델 로드 확인용
     },
     undefined,
     function (error) {
