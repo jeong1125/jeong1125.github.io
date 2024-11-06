@@ -5,7 +5,6 @@ import { OrbitControls } from 'https://unpkg.com/three@0.141.0/examples/jsm/cont
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-// Three.js 기본 설정
 const canvas = document.getElementById('canvas');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -17,13 +16,11 @@ scene.background = new THREE.Color(0xaaaaaa);
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 2, 5);
 
-// OrbitControls 설정
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 controls.screenSpacePanning = false;
 
-// 조명 추가
 const light1 = new THREE.DirectionalLight(0xffffff, 1);
 light1.position.set(5, 10, 7);
 scene.add(light1);
@@ -31,16 +28,15 @@ scene.add(light1);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-// GLTF 모델 로드
 const loader = new GLTFLoader();
 let model;
 
 loader.load(
-    './model.gltf',  // 모델 경로를 정확하게 지정
+    './model.gltf',  
     function (gltf) {
         model = gltf.scene;
         scene.add(model);
-        console.log("Model loaded successfully:", gltf); // 모델 로드 확인용
+        console.log("Model loaded successfully:", gltf); 
     },
     undefined,
     function (error) {
@@ -48,14 +44,12 @@ loader.load(
     }
 );
 
-// 화면 크기 변경에 대응
 window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 });
 
-// 애니메이션 루프
 function animate() {
     requestAnimationFrame(animate);
     if (model) model.rotation.y += 0.01;
