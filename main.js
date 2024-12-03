@@ -15,7 +15,7 @@ const scene = new THREE.Scene();
 
 // 카메라 설정
 const camera = new THREE.PerspectiveCamera( 75, target.clientWidth/target.clientHeight, 0.0001, 10000 );
-camera.position.set(0, 0, 35); // 초기 화면에서 모델 크기, 위치 조정
+camera.position.set(0, 0, 2); // 초기 화면에서 모델 크기, 위치 조정
 
 // THREE.WebGLRenderer 설정
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // 투명 배경 지정 alpha: true
@@ -38,7 +38,7 @@ controls.enableDamping = true;
 
 // GLTF 모델 로딩
 const loader = new GLTFLoader();
-loader.load( 'assets/model.gltf', function ( gltf ) {
+loader.load( 'assets/dog3.glb', function ( gltf ) {
 	model = gltf.scene;
 	model.position.set( 0, 0, 0 );
 	model.scale.set( 1, 1, 1 );
