@@ -38,7 +38,7 @@ controls.enableDamping = true;
 
 // GLTF 모델 로딩
 const loader = new GLTFLoader();
-loader.load( 'assets/dog3.glb', function ( gltf ) {
+loader.load( 'assets/dog2.gltf', function ( gltf ) {
 	model = gltf.scene;
 	model.position.set( 0, 0, 0 );
 	model.scale.set( 1, 1, 1 );
