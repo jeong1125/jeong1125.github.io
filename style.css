@@ -18,6 +18,12 @@
     color: #00ffa3;
     font-size: x-large;
     font-family: 'Mungyeong-Gamhong-Apple';
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#logo.active {
+    transform: scale(1.1);  /* 클릭 시 크기 증가 */
 }
 
 #threejs {
@@ -28,3 +34,92 @@
     height: 100%;
     background-color:#000000;
 }
+
+    #controls {
+        position: fixed;
+        bottom: 20px; /* 화면 아래쪽 여백 */
+        left: 50%; /* 가운데 정렬 */
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px; /* 버튼 간격 */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: bold;
+        background-color: #00ffa3;
+        color: rgb(34, 34, 34);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Mungyeong-Gamhong-Apple';
+        transition: transform 0.1s ease;
+    }
+
+    /* 버튼을 클릭했을 때 크기 증가 */
+    button:active {
+        transform: scale(1.2); /* 버튼을 클릭하면 1.2배 커지게 설정 */
+    }
+
+    button:hover {
+        background-color: #7700ff;
+    }
+
+    #volume-controls {
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    /* 볼륨 슬라이더 스타일 */
+    #volume-slider {
+        width: 150px;
+        -webkit-appearance: none; /* 기본 스타일 제거 */
+        appearance: none; /* 기본 스타일 제거 */
+        height: 8px; /* 슬라이더 트랙의 높이 */
+        background: #ddd; /* 기본 배경색 */
+        border-radius: 5px;
+        outline: none; /* 포커스 시 외곽선 제거 */
+        position: relative;
+    }
+
+    /* 슬라이더 트랙 색상 */
+    #volume-slider::-webkit-slider-runnable-track {
+        height: 8px; /* 트랙의 높이를 슬라이더에 맞추기 */
+        background: #00ffa3; /* 트랙 배경을 초록색으로 설정 */
+        border-radius: 5px;
+    }
+
+    /* 슬라이더 썸(버튼) 스타일 */
+    #volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px; /* 썸의 크기 */
+        height: 20px; /* 썸의 크기 */
+        background: #00ffa3; /* 썸을 오렌지 색으로 설정 */
+        border-radius: 50%; /* 썸을 둥글게 */
+        cursor: pointer;
+        margin-top: -6px; /* 썸이 트랙에 중앙 정렬되도록 위치 조정 */
+        transition: transform 0.1s ease;
+    }
+
+    /* 슬라이더 썸을 드래그할 때 색상 변경 */
+    #volume-slider:active::-webkit-slider-thumb {
+        background: #7700ff; /* 슬라이더를 드래그할 때 색상 변경 */
+        transform: scale(1.2); /* 썸을 클릭했을 때 20% 커지게 설정 */
+    }
+
+    /* 볼륨 슬라이더 컨테이너의 중앙 정렬 */
+    #volume-controls {
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }

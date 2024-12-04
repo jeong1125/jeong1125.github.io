@@ -8,9 +8,22 @@
 </head>
 
 <body>
-    <div id="logo">JBC</div>
+    <div id="logo">
+        JBC
+    </div>
     <div id="threejs"></div>
 
     <script type="module" src="/main.js"></script>
+
+    <div id="controls">
+        <button id="play-music">Play</button>
+        <button id="pause-music">Stop</button>
+    </div>
+    
+    <div id="volume-controls">
+        <label for="volume-slider"></label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
 </body>
+
 </html>
