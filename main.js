@@ -122,3 +122,33 @@ loadModel('assets/dog3.glb'); // 첫 번째 모델 로드
         audio.volume = volumeSlider.value; // 슬라이더 값에 따라 오디오 볼륨 변경
     });
 });
+
+
+// 반딧불이 효과 생성
+const firefliesContainer = document.getElementById('fireflies');
+
+// 반딧불이 점을 랜덤하게 생성하는 함수
+function createFireflies(num) {
+    for (let i = 0; i < num; i++) {
+        const firefly = document.createElement('div');
+        firefly.classList.add('firefly');
+        
+        // 랜덤한 위치 지정
+        firefly.style.top = `${Math.random() * 100}%`;
+        firefly.style.left = `${Math.random() * 100}%`;
+        
+        // 랜덤한 크기 지정
+        firefly.style.width = `${Math.random() * 5 + 3}px`;
+        firefly.style.height = firefly.style.width; // 너비와 높이를 같게 설정
+        
+        // 랜덤한 애니메이션 타이밍 설정
+        firefly.style.animationDuration = `${Math.random() * 2 + 1}s`; // 애니메이션 시간 1~3초
+        firefly.style.animationDelay = `${Math.random() * 2}s`; // 애니메이션 지연 시간 0~2초
+        
+        firefliesContainer.appendChild(firefly);
+    }
+}
+
+// 반딧불이 점 50개 생성
+createFireflies(50);
+
